@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Simulacro Beca 18 · Convocatoria 2025</title>
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main>
+      <header class="hero">
+        <span class="eyebrow">Preparación Beca 18</span>
+        <h1>Simulacro de admisión</h1>
+        <p class="lead">Practica competencias matemáticas y lectoras con 60 preguntas. Avanza al responder correctamente y consulta la nota de resolución después de cada acierto.</p>
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Cambiar tema" title="Cambiar tema">🌙</button>
+      </header>
+
+      <section class="progress-panel" aria-label="Progreso del simulacro">
+        <div class="progress-heading">
+          <div>
+            <p class="section-label">Tu progreso</p>
+            <p id="st" class="progress-copy" role="status" aria-live="polite"></p>
+          </div>
+          <span class="progress-number" id="progress-label">0%</span>
+        </div>
+        <div class="bar" role="progressbar" aria-label="Preguntas superadas" aria-valuemin="0" aria-valuemax="60" aria-valuenow="0">
+          <i id="pb"></i>
+        </div>
+      </section>
+
+      <section class="navigation-panel" aria-label="Navegación de preguntas">
+        <div class="section-heading">
+          <h2>Preguntas</h2>
+          <p>Las preguntas bloqueadas se habilitan al avanzar.</p>
+        </div>
+        <div class="tabs" id="tabs" role="group" aria-label="Filtrar por sección"></div>
+        <div class="grid" id="grid" aria-label="Lista de preguntas"></div>
+      </section>
+
+      <section class="card" id="card" aria-label="Pregunta actual" aria-live="polite"></section>
+      <section class="results card" id="res" aria-label="Resumen de resultados"></section>
+      <button class="nav restart" id="rs">Reiniciar todo</button>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
